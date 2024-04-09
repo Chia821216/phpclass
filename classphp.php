@@ -55,7 +55,7 @@ echo "<hr>";
     <li>E => 59~0</li>
 </ul>
 <?php
-$score=79;
+$score=111;
 if($score>=90 && $score<=100){
     $level=' A ' ; 
 }
@@ -72,12 +72,36 @@ else if($score>=0 && $score<=59){
     $level=' E ' ;
     echo "<br>" ;
     echo 'SABEE' ;
-}else{echo '重新確認成績!' ;}
+}else{echo '重新確認成績!' ;
+    $level= ' ' ;
+}
 
 echo '你的成績:' .$score ;
 echo "<br>" ;
 echo '成績等級:' .$level ;
 echo "<hr>";
+
+switch($level){
+    case ' A ';
+        $words= '哇!' ;
+        break;
+    case ' B ';
+        $words= '恩!' ;
+        break;
+    case ' C ';
+        $words= '嗯?' ;
+        break;
+    case ' D ';
+        $words= '诶!' ;
+        break;
+    case ' E ';
+        $words= '哎呀!' ;
+        break;
+    default;
+}
+echo '老師反應:' .$words ;
+echo "<br>" ;
+echo '你的成績:' .$score ;
 
 
 
