@@ -44,6 +44,36 @@ else{
     $clothprice++ ;
     echo '衣服價錢:' .$clothprice;
 }
+echo "<hr>";
+?>
+<h3>成績階段(if else )</h3>
+<ul>
+    <li>A => 100~90</li>
+    <li>B => 89~80</li>
+    <li>C => 79~70</li>
+    <li>D => 69~60</li>
+    <li>E => 59~0</li>
+</ul>
+<?php
+$score=8;
+if($score>=90 && $score<=100){
+    echo '成績等級: A ' ; 
+}
+else if($score>=80 && $score<=89){
+    echo '成績等級: B ' ;
+}
+else if($score>=70 && $score<=79){
+    echo '成績等級: C ' ;
+}
+else if($score>=60 && $score<=69){
+    echo '成績等級: D ' ;
+}
+else if($score>=0 && $score<=59){
+    echo '成績等級: E ' ;
+    echo "<br>" ;
+    echo 'SABEE' ;
+}
+
 
 ?>
 </body>
