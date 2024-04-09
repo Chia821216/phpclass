@@ -55,26 +55,33 @@ echo "<hr>";
     <li>E => 59~0</li>
 </ul>
 <?php
-$score=8;
+$score=79;
 if($score>=90 && $score<=100){
-    echo '成績等級: A ' ; 
+    $level=' A ' ; 
 }
 else if($score>=80 && $score<=89){
-    echo '成績等級: B ' ;
+    $level=' B ' ;
 }
 else if($score>=70 && $score<=79){
-    echo '成績等級: C ' ;
+    $level=' C ' ;
 }
 else if($score>=60 && $score<=69){
-    echo '成績等級: D ' ;
+    $level=' D ' ;
 }
 else if($score>=0 && $score<=59){
-    echo '成績等級: E ' ;
+    $level=' E ' ;
     echo "<br>" ;
     echo 'SABEE' ;
-}
+}else{echo '重新確認成績!' ;}
+
+echo '你的成績:' .$score ;
+echo "<br>" ;
+echo '成績等級:' .$level ;
+echo "<hr>";
+
 
 
 ?>
+<P>&nbsp;</P><P>&nbsp;</P><P>&nbsp;</P><P>&nbsp;</P>
 </body>
 </html>
