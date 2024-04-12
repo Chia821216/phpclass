@@ -131,21 +131,11 @@
     <?php
    
 
-    for($year=2000 ; $year<=2024 ; $year=$year+4){
-        if($year %100!=0 || $year%400==0){
-            echo $year . "是閏年!自己版";
-            echo '<br>';
-        }else{
-            echo $year . "是平年!自己版";
-            echo '<br>';
 
-        }
-
-    }
     // $year=2048;
     // echo '年份為:' .$year;
     // echo '<br>';
-// 一版
+// 老師一版
     // if ($year%4 ==0 ){
     //     if($year%100 ==0){
     //         if($year%400==0){ 
@@ -155,7 +145,7 @@
     //         }else{ echo $year . '是閏年!';   }
     //         }else{echo $year . "是平年!";}
     
-// 二版
+// 老師二版
     // if ($year%4 == 0){
     //     if($year%100 == 0 && $year%400 != 0){
     //         echo $year . "是平年!二版";
@@ -165,18 +155,50 @@
     // }else{
     //     echo $year . "是平年!二版";
     // }
-// 三版
+// 老師三版
     if($year%4 ==0 && $year %100!=0 || $year%400==0){
         echo $year . "是閏年!三版";
     }else{
         echo $year . "是平年!三版";
     }
-
+// 自己版
+    for($year=2000 ; $year<=2024 ; $year=$year+4){
+        if($year %100!=0 || $year%400==0){
+            echo $year . "是閏年!自己版";
+            echo '<br>';
+        }else{
+            echo $year . "是平年!自己版";
+            echo '<br>';
+        }
+    }
 
     ?>
-    
-    
+    <h2>簡單迴圈練習</h2>
+    <ul>
+        <li>1.3.5.7.9.....n</li>
+        <li>10.20.30.40....n</li>
+        <li>3.5.7.11.13.17...97</li>
+    </ul>
+    <?php
+    echo '<hr>';
+    for($i=1 ; $i<100 ; $i=$i+2){
+        echo $i;
+    echo ',';
 
+    }
+    echo '<hr>';
+    for($i=1 ; $i<100 ; $i++){
+        echo $i*10;
+        echo ',';
+    }
+    echo '<hr>';
+
+
+    for()
+
+
+    
+?>
 <p>&nbsp</p>
 <p>&nbsp</p>
 <p>&nbsp</p>
