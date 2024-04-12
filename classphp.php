@@ -7,7 +7,7 @@
 </head>
 <body>
 <?php
-
+// <a href="index.html">回首頁</a>
 
 echo "ABC";
 
