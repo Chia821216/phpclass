@@ -35,7 +35,7 @@
     </ul>
     
     <?php
-    $score=55;
+    $score=77;
     $level='';
     // if($score>=0 && $score<=59){
     //     $level="E";
@@ -81,7 +81,7 @@
             $color='lightgreen';
             break;
          case 'C':
-             $word="再加油";
+             $word="就差一點";
              $color='pink';
              break;
         case 'D':
@@ -95,7 +95,8 @@
             default;
         
     }
-    // echo "<br>";
+    echo "<br>";
+    // ABCD等級改字體大小顏色
     // if ($level=='A' || $level=='B' || $level=='C' || $level=='D'){
     // echo "<span style='font-size:32px;color:green'>";
 
@@ -106,7 +107,80 @@
     
     echo $word;
     echo "</span>";
+    echo "<hr>";
+    ?>
+    <style>
+        .desc{
+            background-color:skyblue;
+            width:500px;
+            padding: 10px;
+            color:darkgray;
+            border:1px solid darkblue;
+            text-shadow: 1px 1px 2px black;
+        }
+    </style>
+
+    <h2>閏年判斷，給定一個西元年份，判斷是否為閏年</h2>
+    <div class="desc">地球對太陽的公轉一年的真實時間大約是365天5小時48分46秒，因此以365天定為一年 的狀況下，每年會多出近六小時的時間，所以每隔四年設置一個閏年來消除這多出來的一天。</div>
+    <ul>
+        <li>公元年分除以4不可整除，為平年。</li>
+        <li>公元年分除以4可整除但除以100不可整除，為閏年。</li>
+        <li>公元年分除以100可整除但除以400不可整除，為平年。</li>
+    </ul>
+    
+    <?php
+   
+
+    for($year=2000 ; $year<=2024 ; $year=$year+4){
+        if($year %100!=0 || $year%400==0){
+            echo $year . "是閏年!自己版";
+            echo '<br>';
+        }else{
+            echo $year . "是平年!自己版";
+            echo '<br>';
+
+        }
+
+    }
+    // $year=2048;
+    // echo '年份為:' .$year;
+    // echo '<br>';
+// 一版
+    // if ($year%4 ==0 ){
+    //     if($year%100 ==0){
+    //         if($year%400==0){ 
+    //             echo $year . '是閏年!';   
+    //         }else{
+    //             echo $year . "是平年!"; }           
+    //         }else{ echo $year . '是閏年!';   }
+    //         }else{echo $year . "是平年!";}
+    
+// 二版
+    // if ($year%4 == 0){
+    //     if($year%100 == 0 && $year%400 != 0){
+    //         echo $year . "是平年!二版";
+    //     }else{
+    //         echo $year . '是閏年!二版';   
+    //     }
+    // }else{
+    //     echo $year . "是平年!二版";
+    // }
+// 三版
+    if($year%4 ==0 && $year %100!=0 || $year%400==0){
+        echo $year . "是閏年!三版";
+    }else{
+        echo $year . "是平年!三版";
+    }
+
 
     ?>
+    
+    
+
+<p>&nbsp</p>
+<p>&nbsp</p>
+<p>&nbsp</p>
+<p>&nbsp</p>
+<p>&nbsp</p>
 </body>
 </html>
