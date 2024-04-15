@@ -37,7 +37,7 @@ for($i=$stars; $i>0 ; $i--){
 <?php
 
 for($i=0 ; $i<$stars ; $i++){ 
-    for($k=0 ; $k<=$stars-1-$i ; $k++){
+    for($k=0 ; $k<$stars-1-$i ; $k++){
     echo "&nbsp";
     }
     for($j=0 ;$j<$i*2+1 ;$j++){
@@ -46,10 +46,30 @@ for($i=0 ; $i<$stars ; $i++){
     echo '<br>';
 }
 ?>
+<h4>菱形</h4>
+<?php
+
+for($i=0 ; $i<$stars ; $i++){ 
+    for($k=0 ; $k<$stars-1-$i ; $k++){
+    echo "&nbsp";
+    }
+    for($j=0 ;$j<$i*2+1 ;$j++){
+        echo "*";
+    }
+    echo '<br>';
+}
+for($i=$stars-1 ; $i>0 ; $i--){ 
+    for($k=0 ; $k<$stars-$i ; $k++){
+        echo "&nbsp";
+    }
+    for($j=0 ;$j<$i*2-1 ;$j++){
+        echo "*";
+    }
+    echo '<br>';
+}
 
 
-
-
+?>
 
 
 
