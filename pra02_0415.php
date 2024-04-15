@@ -64,20 +64,39 @@
                 echo "</td>" ;
         echo "</tr>" ;
         }
-        
-        
     echo "</table>";
     
     ?>
 
+<h2>尋找字元(使用while)</h2>
+        <ul>
+            <li>給定一個字串句子</li>
+            <li>給定一個單字或字母</li>
+            <li>尋找相符的內容</li>
+            <li>印出尋找到的但自或字母所在句子中的位置</li>
+        </ul>
+        <p>例:伊朗向以色列發動襲擊戰爭升級擔憂加劇 · 蘇文強蘇海金案宣判新加坡如何避免淪為富人洗錢天堂。</p>
+
+<?php
+$str='例:伊朗向以色列發動襲擊戰爭升級擔憂加劇 · 蘇文強蘇海金案宣判新加坡如何避免淪為富人洗錢天堂。';
+$target="蘇文強";
+
+$position=0;
+while($target!=mb_substr($str,$position,mp_strlen($target))){
+    echo 'p='.$position;
+    echo "substr =" . mp_substr($str, $position,my_striem($target));
+    echo '<br>';
+    $position=$position+1;
+
+}
+
+//  for($i=0 ; )
+echo $target . "的位置在" $position;
+echo "<br>";
+echo mb_strpos($str,$target);
 
 
-
-
-
-
-
-
+?>
 
 
 <p>&nbsp;</p>
