@@ -12,8 +12,11 @@
         }
         tr , td {
             border: 2px dashed darkblue;
-            text-align:center;
-            text-size:auto;
+            text-align:left;
+            background-color: lightblue;
+        }
+        td{
+            hover
         }
     </style>
 </head>
@@ -24,10 +27,12 @@
     <h2>九九乘法表-簡單版</h2>
 <table>
     <?php
+    // 九九乘法表有兩個1~9的變數，所以用兩個迴圈寫
     for($i=1 ; $i<=9 ; $i++){
         echo '<tr>';
         for($j=1 ; $j<=9 ;$j++){
-        echo  "<td> $i x  $j =  $i*$j </td>";
+            $k=$i*$j;
+        echo  "<td>" .$j. 'x'  .$i. '='  .$k. "</td>";
         // echo '<br>';
         }    
         echo '</tr>';
@@ -35,6 +40,33 @@
     ?>
 </table>
 
+    <h2>九九乘法表-精緻版</h2>
+
+    <?php
+    echo "<table id='nine9'>";
+        
+        for($i=0 ; $i<=9 ; $i++){
+        echo "<tr>" ;
+            for($j=0 ; $j<=9 ; $j++){
+                echo "<td>" ;
+                if($i == 0  && $j == 0){
+                    echo  " " ;
+                }else if($j == 0 ){
+                    echo  $i ;
+                }else if($i == 0){     
+                    echo $j;
+                }else{
+                    echo ($j*$i);
+                }
+            }
+                echo "</td>" ;
+        echo "</tr>" ;
+        }
+        
+        
+    echo "</table>";
+    
+    ?>
 
 
 
@@ -45,5 +77,11 @@
 
 
 
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 </body>
 </html>
