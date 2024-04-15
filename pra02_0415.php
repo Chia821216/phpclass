@@ -94,15 +94,8 @@ while($target!=mb_substr($str,$position,mp_strlen($target))){
 echo $target . "的位置在" $position;
 echo "<br>";
 echo mb_strpos($str,$target);
-
-
 ?>
 
 
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
 </body>
 </html>
