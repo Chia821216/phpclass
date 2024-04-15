@@ -15,8 +15,10 @@
             text-align:left;
             background-color: lightblue;
         }
-        td{
-            hover
+        #nine9 tr:nth-child(1) td,
+        #nine9 td:nth-child(1){
+            background-color: gray;
+            color:#CCC;
         }
     </style>
 </head>
