@@ -67,11 +67,29 @@ for($i=$stars-1 ; $i>0 ; $i--){
     }
     echo '<br>';
 }
+?>
+<h4>菱形(終極版)</h4>
+<?php
+$odd=($stars%2 == 0)? $stars+1 : $stars;
+$mid=(($odd+1)/2)-1;
+for($i=0 ; $i<$stars ; $i++){
+    if($i<=$mid){
+        $tmp=$i;
+    }else{
+        $tmp=$tmp-1;
+    }
+    for($k=0 ; $k<$mid-$tmp ;$k++){
+        echo "&nbsp";
+    }
+    for($j=0 ; $j<$tmp*2+1 ; $j++){
+        echo "*";
+    }
+    echo "<br>";
+}
+
 
 
 ?>
-
-
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
